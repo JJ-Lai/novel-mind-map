@@ -1,0 +1,443 @@
+{
+  "schemaVersion": "2.0.0",
+  "document": {
+    "id": "doc_jiangshen",
+    "title": "降神",
+    "author": null,
+    "language": "zh-Hant",
+    "workSetId": null
+  },
+  "meta": {
+    "createdAt": "2026-09-05T14:30:00.000Z",
+    "producer": {
+      "type": "human",
+      "name": "mvp-curated-sample"
+    },
+    "confidenceDefault": 0.85,
+    "notes": "藍圖四維度（Character/Event/Theme/Symbol）示範圖譜"
+  },
+  "nodes": [
+    {
+      "id": "n_char_narrator",
+      "type": "Character",
+      "label": "敘事者／李侑玲",
+      "aliases": ["李侑玲", "我"],
+      "summary": "第一人稱；在信仰懷疑與對奶奶的情感之間擺盪。",
+      "evidence": [{ "quote": "「心誠意正，恭請李氏歷代公媽，子孫李侑玲……」" }],
+      "confidence": 0.95,
+      "source": "user"
+    },
+    {
+      "id": "n_char_grandma",
+      "type": "Character",
+      "label": "奶奶／李陳桂芳",
+      "aliases": ["阿媽", "李陳桂芳"],
+      "summary": "鄉里降神儀式的容器；九十九歲於安寧病房離世。",
+      "evidence": [{ "quote": "信女李陳桂芳在此向您請安。" }],
+      "confidence": 0.95,
+      "source": "user"
+    },
+    {
+      "id": "n_char_yuxin",
+      "type": "Character",
+      "label": "渝鑫",
+      "summary": "體弱的基督徒同學；與敘事者長期對話上帝／民間神／騙子指控。",
+      "evidence": [{ "quote": "「可是神真的存在，我說的是上帝。」" }],
+      "confidence": 0.95,
+      "source": "user"
+    },
+    {
+      "id": "n_theme_faith_doubt",
+      "type": "Theme",
+      "label": "信仰與懷疑",
+      "summary": "不信神卻信奶奶；禱告與沉默回應之間的張力。",
+      "evidence": [{ "quote": "「但我相信奶奶。」" }],
+      "confidence": 0.92,
+      "source": "user"
+    },
+    {
+      "id": "n_theme_language_gap",
+      "type": "Theme",
+      "label": "語言與溝通失效",
+      "summary": "台語、中文、禱告用語無法抵達對方或神明。",
+      "evidence": [{ "quote": "總有些時候會發生無法說出任何話" }],
+      "confidence": 0.9,
+      "source": "user"
+    },
+    {
+      "id": "n_theme_pain_asylum",
+      "type": "Theme",
+      "label": "痛苦與神的寄託",
+      "summary": "神依附人的痛苦而存在；抑鬱者帶著劫來求神。",
+      "evidence": [{ "quote": "神若存在，是依附著人的痛苦" }],
+      "confidence": 0.93,
+      "source": "user"
+    },
+    {
+      "id": "n_theme_unfair_god",
+      "type": "Theme",
+      "label": "神的不公與殘忍",
+      "summary": "報應與地獄邏輯無法解釋活人苦難。",
+      "evidence": [{ "quote": "「神明有時陣嘛是誠殘忍的。」" }],
+      "confidence": 0.9,
+      "source": "user"
+    },
+    {
+      "id": "n_theme_vessel",
+      "type": "Theme",
+      "label": "神明的容器／降神",
+      "aliases": ["器皿", "降靈"],
+      "summary": "奶奶作為降神載體；臨終意識抽離時叩問是否仍有神願降靈。",
+      "evidence": [{ "quote": "身為神明的器皿，這份使命，我看也已經行到尾站矣。" }],
+      "confidence": 0.94,
+      "source": "user"
+    },
+    {
+      "id": "n_theme_believe_person",
+      "type": "Theme",
+      "label": "信人而非信神",
+      "summary": "喝符水是為讓奶奶放心，不是為神。",
+      "evidence": [{ "quote": "我只是做做樣子，我是做給奶奶看的，不是給神看的。" }],
+      "confidence": 0.92,
+      "source": "user"
+    },
+    {
+      "id": "n_theme_memory_death",
+      "type": "Theme",
+      "label": "記憶、死亡與容器",
+      "summary": "意識消熔後，人是否仍只是神明的容器。",
+      "evidence": [{ "quote": "留下信徒們口中說的：一尊神明的容器。" }],
+      "confidence": 0.91,
+      "source": "user"
+    },
+    {
+      "id": "n_event_death",
+      "type": "Event",
+      "label": "奶奶九十九歲離世",
+      "summary": "未撐過百歲預言；安寧病房與信徒致意。",
+      "evidence": [{ "quote": "奶奶九十九年的人生結束了。" }],
+      "confidence": 0.98,
+      "source": "user"
+    },
+    {
+      "id": "n_event_liar_accusation",
+      "type": "Event",
+      "label": "渝鑫控訴「騙子」",
+      "summary": "受洗衝突後，把符紙紅繩砸向敘事者。",
+      "evidence": [{ "quote": "「她是個騙子。」" }],
+      "confidence": 0.95,
+      "source": "user"
+    },
+    {
+      "id": "n_event_jiaobao",
+      "type": "Event",
+      "label": "神明廳擲筊墜落",
+      "summary": "獨自問「奶奶是騙子嗎」後無回應，筊掉落引發恐懼。",
+      "evidence": [{ "quote": "紅色的筊沿著神明桌緣墜落" }],
+      "confidence": 0.93,
+      "source": "user"
+    },
+    {
+      "id": "n_event_ritual_end",
+      "type": "Event",
+      "label": "金盆洗手／儀式停歇",
+      "summary": "對外稱神明不再聽稟告；實則身體負荷過重。",
+      "evidence": [{ "quote": "神明廳的儀式宣布停歇。" }],
+      "confidence": 0.9,
+      "source": "user"
+    },
+    {
+      "id": "n_event_name_call",
+      "type": "Event",
+      "label": "病房喚名「侑玲」",
+      "summary": "意識模糊中唯一清晰的召喚，與「我佇遮」相對。",
+      "evidence": [{ "quote": "「侑玲。」" }],
+      "confidence": 0.96,
+      "source": "user"
+    },
+    {
+      "id": "n_event_funeral",
+      "type": "Event",
+      "label": "告別式與樹下抽菸",
+      "summary": "渝鑫到來，雙方以煙、十字架與平安禱告收束。",
+      "evidence": [{ "quote": "「願主為你帶來平安。」" }],
+      "confidence": 0.94,
+      "source": "user"
+    },
+    {
+      "id": "n_sym_tape",
+      "type": "Symbol",
+      "label": "錄音帶／快樂天堂",
+      "summary": "無法播放的聲音＝無法倒帶的記憶。",
+      "evidence": [{ "quote": "上面標籤紙寫著「快樂天堂」。" }],
+      "confidence": 0.9,
+      "source": "user"
+    },
+    {
+      "id": "n_sym_charm",
+      "type": "Symbol",
+      "label": "符紙／符水／紅符袋",
+      "summary": "信仰物質化的媒介，亦是衝突與安慰的道具。",
+      "evidence": [{ "quote": "一張破舊的黃色符紙" }],
+      "confidence": 0.92,
+      "source": "user"
+    },
+    {
+      "id": "n_sym_incense",
+      "type": "Symbol",
+      "label": "線香",
+      "summary": "儀式時間的計量；臨終被禁嗅煙後仍執念點香。",
+      "evidence": [{ "quote": "線香卻一節一節的燃燒再掉落" }],
+      "confidence": 0.88,
+      "source": "user"
+    },
+    {
+      "id": "n_sym_fish",
+      "type": "Symbol",
+      "label": "菜市場的魚",
+      "summary": "最早觸摸死亡：鮮活、掙扎、被挑選宰殺。",
+      "evidence": [{ "quote": "那是我最早觸摸死亡的回憶，鮮活，清甜。" }],
+      "confidence": 0.9,
+      "source": "user"
+    },
+    {
+      "id": "n_sym_cross",
+      "type": "Symbol",
+      "label": "十字架項鍊",
+      "summary": "渝鑫信仰的身體標記，與符咒對位。",
+      "evidence": [{ "quote": "雙手拿起脖子上的十字架項鏈" }],
+      "confidence": 0.88,
+      "source": "user"
+    },
+    {
+      "id": "n_sym_shrine",
+      "type": "Symbol",
+      "label": "二樓神明廳",
+      "summary": "週三儀式、問神與童年創傷的核心空間意象。",
+      "evidence": [{ "quote": "二樓神明廳的落地窗一定全開" }],
+      "confidence": 0.93,
+      "source": "user"
+    },
+    {
+      "id": "n_sym_hospice",
+      "type": "Symbol",
+      "label": "安寧病房",
+      "summary": "死亡現場；花香、呼吸器與最後喚名。",
+      "evidence": [{ "quote": "高鐵接著計程車兩個小時回到高雄榮總。" }],
+      "confidence": 0.95,
+      "source": "user"
+    },
+    {
+      "id": "n_sym_hell_temple",
+      "type": "Symbol",
+      "label": "地獄廟／拔舌酷刑",
+      "summary": "童年罪罰想像的具象場景。",
+      "evidence": [{ "quote": "在台南的代天宮有一間地獄廟" }],
+      "confidence": 0.9,
+      "source": "user"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e_001",
+      "from": "n_event_death",
+      "to": "n_theme_memory_death",
+      "type": "embodies",
+      "label": "喪親觸發",
+      "source": "user",
+      "confidence": 0.9
+    },
+    {
+      "id": "e_002",
+      "from": "n_char_grandma",
+      "to": "n_theme_vessel",
+      "type": "embodies",
+      "label": "降神容器",
+      "source": "user",
+      "confidence": 0.94
+    },
+    {
+      "id": "e_003",
+      "from": "n_char_yuxin",
+      "to": "n_char_narrator",
+      "type": "contrasts_with",
+      "label": "上帝 vs 民間神",
+      "source": "user",
+      "confidence": 0.92
+    },
+    {
+      "id": "e_004",
+      "from": "n_event_liar_accusation",
+      "to": "n_theme_language_gap",
+      "type": "causes",
+      "label": "語塞",
+      "source": "user",
+      "confidence": 0.88
+    },
+    {
+      "id": "e_005",
+      "from": "n_event_liar_accusation",
+      "to": "n_theme_faith_doubt",
+      "type": "causes",
+      "source": "user",
+      "confidence": 0.9
+    },
+    {
+      "id": "e_006",
+      "from": "n_event_jiaobao",
+      "to": "n_theme_faith_doubt",
+      "type": "embodies",
+      "label": "無聲回應",
+      "source": "user",
+      "confidence": 0.9
+    },
+    {
+      "id": "e_007",
+      "from": "n_sym_shrine",
+      "to": "n_event_jiaobao",
+      "type": "related_to",
+      "source": "user",
+      "confidence": 0.85
+    },
+    {
+      "id": "e_008",
+      "from": "n_sym_charm",
+      "to": "n_theme_vessel",
+      "type": "recurs_in",
+      "source": "user",
+      "confidence": 0.86
+    },
+    {
+      "id": "e_009",
+      "from": "n_sym_tape",
+      "to": "n_theme_memory_death",
+      "type": "embodies",
+      "label": "無法播放的記憶",
+      "source": "user",
+      "confidence": 0.88
+    },
+    {
+      "id": "e_010",
+      "from": "n_sym_fish",
+      "to": "n_theme_unfair_god",
+      "type": "embodies",
+      "label": "被挑選的犧牲",
+      "source": "user",
+      "confidence": 0.84
+    },
+    {
+      "id": "e_011",
+      "from": "n_sym_hell_temple",
+      "to": "n_theme_unfair_god",
+      "type": "embodies",
+      "source": "user",
+      "confidence": 0.87
+    },
+    {
+      "id": "e_012",
+      "from": "n_theme_pain_asylum",
+      "to": "n_theme_vessel",
+      "type": "related_to",
+      "source": "user",
+      "confidence": 0.85
+    },
+    {
+      "id": "e_013",
+      "from": "n_char_narrator",
+      "to": "n_theme_believe_person",
+      "type": "embodies",
+      "source": "user",
+      "confidence": 0.93
+    },
+    {
+      "id": "e_014",
+      "from": "n_theme_believe_person",
+      "to": "n_theme_faith_doubt",
+      "type": "evolves_into",
+      "source": "user",
+      "confidence": 0.86
+    },
+    {
+      "id": "e_015",
+      "from": "n_event_ritual_end",
+      "to": "n_theme_vessel",
+      "type": "evolves_into",
+      "label": "卸下器皿",
+      "source": "user",
+      "confidence": 0.9
+    },
+    {
+      "id": "e_016",
+      "from": "n_event_name_call",
+      "to": "n_theme_language_gap",
+      "type": "contrasts_with",
+      "label": "終於被聽見的名字",
+      "source": "user",
+      "confidence": 0.88
+    },
+    {
+      "id": "e_017",
+      "from": "n_sym_hospice",
+      "to": "n_event_name_call",
+      "type": "related_to",
+      "source": "user",
+      "confidence": 0.9
+    },
+    {
+      "id": "e_018",
+      "from": "n_event_funeral",
+      "to": "n_char_yuxin",
+      "type": "participates_in",
+      "source": "user",
+      "confidence": 0.92
+    },
+    {
+      "id": "e_019",
+      "from": "n_sym_cross",
+      "to": "n_event_funeral",
+      "type": "recurs_in",
+      "source": "user",
+      "confidence": 0.85
+    },
+    {
+      "id": "e_020",
+      "from": "n_sym_incense",
+      "to": "n_sym_charm",
+      "type": "related_to",
+      "source": "user",
+      "confidence": 0.8
+    },
+    {
+      "id": "e_021",
+      "from": "n_char_grandma",
+      "to": "n_event_death",
+      "type": "participates_in",
+      "source": "user",
+      "confidence": 0.95
+    },
+    {
+      "id": "e_022",
+      "from": "n_char_narrator",
+      "to": "n_event_name_call",
+      "type": "participates_in",
+      "source": "user",
+      "confidence": 0.93
+    },
+    {
+      "id": "e_023",
+      "from": "n_event_death",
+      "to": "n_sym_hospice",
+      "type": "related_to",
+      "source": "user",
+      "confidence": 0.9
+    },
+    {
+      "id": "e_024",
+      "from": "n_char_yuxin",
+      "to": "n_sym_cross",
+      "type": "uses",
+      "source": "user",
+      "confidence": 0.88
+    }
+  ]
+}

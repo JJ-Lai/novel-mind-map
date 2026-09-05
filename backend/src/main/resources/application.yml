@@ -1,0 +1,25 @@
+server:
+  port: 8787
+
+spring:
+  application:
+    name: novel-map-backend
+  jackson:
+    default-property-inclusion: non_null
+
+novelmap:
+  schema-version: "2.0.0"
+  dedup-threshold: 0.85
+  embedding-model: text-embedding-3-small
+  openai-base-url: https://api.openai.com/v1
+  works-file: data/works.json
+  neo4j:
+    enabled: ${NEO4J_ENABLED:false}
+    uri: ${NEO4J_URI:bolt://127.0.0.1:7687}
+    user: ${NEO4J_USER:neo4j}
+    password: ${NEO4J_PASSWORD:password}
+    database: ${NEO4J_DATABASE:neo4j}
+
+logging:
+  level:
+    com.novelmap: INFO

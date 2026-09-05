@@ -1,0 +1,139 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://novel-map.local/schemas/novel-graph.schema.json",
+  "title": "NovelGraph",
+  "description": "對齊開發藍圖四維度：Character / Event / Theme / Symbol。不含 Technique。",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "document", "meta", "nodes", "edges"],
+  "properties": {
+    "schemaVersion": { "type": "string", "const": "2.0.0" },
+    "document": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "title", "language"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "title": { "type": "string", "minLength": 1 },
+        "author": { "type": ["string", "null"] },
+        "language": {
+          "type": "string",
+          "enum": ["zh-Hant", "zh-Hans", "en", "ja", "other"]
+        },
+        "workSetId": { "type": ["string", "null"] }
+      }
+    },
+    "meta": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["createdAt", "producer"],
+      "properties": {
+        "createdAt": { "type": "string", "format": "date-time" },
+        "producer": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["type", "name"],
+          "properties": {
+            "type": { "type": "string", "enum": ["llm", "agent", "human"] },
+            "name": { "type": "string", "minLength": 1 },
+            "model": { "type": "string" }
+          }
+        },
+        "confidenceDefault": { "type": "number", "minimum": 0, "maximum": 1 },
+        "notes": { "type": "string" }
+      }
+    },
+    "nodes": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/node" }
+    },
+    "edges": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/edge" }
+    }
+  },
+  "$defs": {
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["quote"],
+      "properties": {
+        "quote": { "type": "string", "minLength": 1, "maxLength": 200 },
+        "locator": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "chapter": { "type": "string" },
+            "offsetStart": { "type": "integer", "minimum": 0 },
+            "offsetEnd": { "type": "integer", "minimum": 0 }
+          }
+        }
+      }
+    },
+    "node": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "type", "label", "source"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-zA-Z][a-zA-Z0-9_\\-]{1,64}$"
+        },
+        "type": {
+          "type": "string",
+          "enum": ["Character", "Event", "Theme", "Symbol"]
+        },
+        "label": { "type": "string", "minLength": 1, "maxLength": 80 },
+        "aliases": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 },
+          "uniqueItems": true
+        },
+        "summary": { "type": "string", "maxLength": 500 },
+        "evidence": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/evidence" }
+        },
+        "attrs": { "type": "object", "additionalProperties": true },
+        "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+        "unverified": { "type": "boolean" },
+        "source": { "type": "string", "enum": ["llm", "import", "user"] }
+      }
+    },
+    "edge": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "from", "to", "type", "source"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-zA-Z][a-zA-Z0-9_\\-]{1,64}$"
+        },
+        "from": { "type": "string", "minLength": 1 },
+        "to": { "type": "string", "minLength": 1 },
+        "type": {
+          "type": "string",
+          "enum": [
+            "embodies",
+            "causes",
+            "contrasts_with",
+            "uses",
+            "recurs_in",
+            "evolves_into",
+            "related_to",
+            "participates_in"
+          ]
+        },
+        "label": { "type": "string", "maxLength": 80 },
+        "evidence": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/evidence" }
+        },
+        "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+        "unverified": { "type": "boolean" },
+        "source": { "type": "string", "enum": ["llm", "import", "user"] },
+        "originalTerm": { "type": "string" }
+      }
+    }
+  }
+}
